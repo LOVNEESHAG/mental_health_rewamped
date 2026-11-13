@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mansik Santulan Score | Student Mental Wellness Assessment</title>
+<meta name="description"
+content="Mansik Santulan Score — an AI-powered student mental wellness score estimator based on everyday habits.">
+<meta name="theme-color" content="#2A1810">
+<meta name="referrer" content="no-referrer">
+<!-- If the API is hosted on a different domain, add that exact origin to connect-src and drop the onrender wildcard. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://*.onrender.com http://127.0.0.1:8000 http://localhost:8000; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the calculator</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand-mark" href="#">
+      <span class="brand-symbol">M</span>
+      <span class="brand-name">
+        MANSIK
+        <span class="brand-second">SANTULAN</span>
+        <small>STUDENT WELLNESS INDEX</small>
+      </span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#tool">Calculator</a>
+      <a href="#about">About the model</a>
+      <button type="button" class="link" data-open="terms">Terms</button>
+      <button type="button" class="link" data-open="privacy">Privacy</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <h1>
+        Understand your mind.
+        <span class="highlight">Find your balance.</span>
+      </h1>
+      <p class="lead">Enter twelve details about screen time, sleep, study, movement and stress. A model trained on 5,000 student survey responses returns a score from 0 to 10, where a higher score means better reported mental health.</p>
+    </div>
+    <div class="balance-visual" role="img" aria-label="An animated illustration of a balanced mind, with a calm central symbol and orbiting icons for sleep, learning, movement and wellbeing.">
+      <div class="visual-glow"></div>
+      <div class="orbit orbit-one"><span></span></div>
+      <div class="orbit orbit-two"><span></span></div>
+      <div class="orbit-chip chip-sleep"><span class="chip-icon" aria-hidden="true">☾</span><span><b>REST</b><small>Recharge</small></span></div>
+      <div class="orbit-chip chip-study"><span class="chip-icon" aria-hidden="true">✳</span><span><b>FOCUS</b><small>Learn</small></span></div>
+      <div class="orbit-chip chip-move"><span class="chip-icon" aria-hidden="true">↗</span><span><b>MOVE</b><small>Feel good</small></span></div>
+      <div class="orbit-chip chip-calm"><span class="chip-icon" aria-hidden="true">✦</span><span><b>UNWIND</b><small>Find calm</small></span></div>
+      <div class="mind-core">
+        <svg viewBox="0 0 220 220" aria-hidden="true" focusable="false">
+          <circle class="core-disc" cx="110" cy="110" r="88"/>
+          <circle class="core-inner" cx="110" cy="110" r="68"/>
+          <path class="mind-line" d="M110 55c-18-18-48-4-44 20-19 9-17 36 0 44-8 24 13 43 34 34 5 19 29 19 34 0 21 9 42-10 34-34 17-8 19-35 0-44 4-24-26-38-44-20-4-8-10-12-14-12s-10 4-14 12Z"/>
+          <path class="mind-detail" d="M110 55v98M66 75c18 0 24 14 24 28s-8 20-17 20m81-48c-18 0-24 14-24 28s8 20 17 20M90 76c12 8 12 20 5 29m35-29c-12 8-12 20-5 29M88 145c10-12 34-12 44 0"/>
+          <path class="core-spark" d="m110 28 4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/>
+        </svg>
+      </div>
+      <div class="visual-caption"><span class="caption-dot"></span> SMALL HABITS. STEADIER DAYS.</div>
+    </div>
+  </section>
+
+  <noscript><p class="wrap err">The calculator needs JavaScript. Turn it on in your browser and reload this page.</p></noscript>
+
+  <section id="tool" class="wrap tool" aria-label="Calculator">
+    <form id="form" class="panel" novalidate autocomplete="off">
+      <fieldset>
+        <legend>About you</legend>
+        <div class="grid">
+          <div class="field"><label for="Age">Age</label>
+            <input id="Age" name="Age" type="number" inputmode="numeric" min="10" max="100" step="1" value="20" required></div>
+          <div class="field"><span class="lbl" id="l-gender">Gender</span>
+            <div class="segs" role="radiogroup" aria-labelledby="l-gender">
+              <label class="seg"><input type="radio" name="Gender" value="Female"><span>Female</span></label>
+              <label class="seg"><input type="radio" name="Gender" value="Male"><span>Male</span></label>
+            </div></div>
+          <div class="field"><label for="Country">Country</label>
+            <select id="Country" name="Country" required>
+              <option value="">Select a country</option>
+              <option>India</option><option value="USA">United States</option><option>Canada</option>
+              <option>Australia</option><option value="UK">United Kingdom</option><option>Germany</option>
+              <option>Mexico</option><option>Turkey</option><option>France</option>
+              <option value="Other">Other (any country not listed)</option>
+            </select></div>
+          <div class="field"><span class="lbl" id="l-level">Academic level</span>
+            <div class="segs" role="radiogroup" aria-labelledby="l-level">
+              <label class="seg"><input type="radio" name="Academic_Level" value="High School"><span>High school</span></label>
+              <label class="seg"><input type="radio" name="Academic_Level" value="Undergraduate"><span>Undergrad</span></label>
+              <label class="seg"><input type="radio" name="Academic_Level" value="Graduate"><span>Graduate</span></label>
+            </div></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Social media</legend>
+        <div class="grid">
+          <div class="field"><label for="Most_Used_Platform">Most used platform</label>
+            <select id="Most_Used_Platform" name="Most_Used_Platform" required>
+              <option value="">Select a platform</option>
+              <option>Instagram</option><option>TikTok</option><option>YouTube</option><option>WhatsApp</option>
+              <option>Facebook</option><option>Snapchat</option><option>Twitter</option><option>LinkedIn</option>
+              <option>WeChat</option><option>LINE</option><option>KakaoTalk</option><option>VKontakte</option>
+            </select></div>
+          <div class="field"><label for="Daily_Unlocks">Phone unlocks per day</label>
+            <input id="Daily_Unlocks" name="Daily_Unlocks" type="number" inputmode="numeric" min="0" max="1000" step="5" value="80" required></div>
+          <div class="field wide"><span class="lbl" id="l-purpose">Main purpose of use</span>
+            <div class="segs" role="radiogroup" aria-labelledby="l-purpose">
+              <label class="seg"><input type="radio" name="Purpose_Of_Use" value="Entertainment"><span>Entertainment</span></label>
+              <label class="seg"><input type="radio" name="Purpose_Of_Use" value="Networking"><span>Networking</span></label>
+              <label class="seg"><input type="radio" name="Purpose_Of_Use" value="Education"><span>Education</span></label>
+              <label class="seg"><input type="radio" name="Purpose_Of_Use" value="News"><span>News</span></label>
+            </div></div>
+          <div class="field wide"><label for="Avg_Daily_Usage_Hours">Daily social media use <small>hours</small></label>
+            <div class="pair"><input type="range" data-sync="Avg_Daily_Usage_Hours" min="0" max="24" step="0.5" value="4.5" tabindex="-1" aria-hidden="true">
+            <input id="Avg_Daily_Usage_Hours" name="Avg_Daily_Usage_Hours" type="number" inputmode="decimal" min="0" max="24" step="0.5" value="4.5" required></div></div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Daily routine</legend>
+        <div class="grid">
+          <div class="field"><label for="Study_Hours">Study <small>hours per day</small></label>
+            <div class="pair"><input type="range" data-sync="Study_Hours" min="0" max="24" step="0.5" value="4" tabindex="-1" aria-hidden="true">
+            <input id="Study_Hours" name="Study_Hours" type="number" inputmode="decimal" min="0" max="24" step="0.5" value="4" required></div></div>
+          <div class="field"><label for="Sleep_Hours_Per_Night">Sleep <small>hours per night</small></label>
+            <div class="pair"><input type="range" data-sync="Sleep_Hours_Per_Night" min="0" max="24" step="0.5" value="7" tabindex="-1" aria-hidden="true">
+            <input id="Sleep_Hours_Per_Night" name="Sleep_Hours_Per_Night" type="number" inputmode="decimal" min="0" max="24" step="0.5" value="7" required></div></div>
+          <div class="field"><label for="Physical_Activity_Hours">Physical activity <small>hours per day</small></label>
+            <div class="pair"><input type="range" data-sync="Physical_Activity_Hours" min="0" max="24" step="0.5" value="1" tabindex="-1" aria-hidden="true">
+            <input id="Physical_Activity_Hours" name="Physical_Activity_Hours" type="number" inputmode="decimal" min="0" max="24" step="0.5" value="1" required></div></div>
+          <div class="field"><span class="lbl" id="l-stress">Current stress level</span>
+            <div class="segs" role="radiogroup" aria-labelledby="l-stress">
+              <label class="seg"><input type="radio" name="Stress_Level" value="Low"><span>Low</span></label>
+              <label class="seg"><input type="radio" name="Stress_Level" value="Medium"><span>Medium</span></label>
+              <label class="seg"><input type="radio" name="Stress_Level" value="High"><span>High</span></label>
+              <label class="seg"><input type="radio" name="Stress_Level" value="Very High"><span>Very high</span></label>
+            </div></div>
+        </div>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit" class="btn" id="go">Calculate score</button>
+        <button type="reset" class="btn ghost">Reset</button>
+      </div>
+    </form>
+
+    <aside class="panel result" id="panel" aria-labelledby="res-h" aria-busy="false">
+      <h2 id="res-h">Your score</h2>
+      <p class="big"><span id="score" aria-hidden="true">--</span><span class="of">/ 10</span></p>
+      <p class="band" id="band">Waiting for your details</p>
+      <div class="ruler" id="ruler" aria-hidden="true"><div class="fill"></div><div class="mark"></div></div>
+      <div class="scale" aria-hidden="true"><span>0</span><span>5</span><span>10</span></div>
+      <p id="reading" class="reading">Fill in the form and press Calculate score. The result appears here, next to your answers.</p>
+      <p id="apiError" class="err" hidden></p>
+      <div id="extra" hidden>
+        <h3>General notes</h3>
+        <ul id="notes" class="notes"></ul>
+        <h3>Values you sent</h3>
+        <dl id="recap" class="recap"></dl>
+      </div>
+      <p class="fine">Estimates come from patterns in survey data and cannot diagnose anything. If you are struggling, speak to someone you trust or a qualified professional. In India, Tele-MANAS offers free support on 14416.</p>
+      <p id="status" class="sr" role="status"></p>
+    </aside>
+  </section>
+
+  <section id="about" class="wrap about">
+    <h2>About the model</h2>
+    <div class="cols">
+      <p>The model is a scikit-learn regression pipeline. It was trained on a public survey of 5,000 students covering age, gender, country, academic level, platform, purpose of use, daily screen time, phone unlocks, study, sleep, physical activity and stress.</p>
+      <p>Each score is an average learned from similar students. Individual results vary widely, and the data reflects one survey at one point in time. Use the number to start a conversation about habits, and take health decisions to a qualified professional.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="brand">MANSIK SANTULAN</p>
+    <p>&copy; <span id="year">2026</span> Lovneesh Agrawal. All rights reserved.</p>
+    <p>A student project for information only. It is not medical advice.</p>
+    <nav aria-label="Legal">
+      <button type="button" class="link" data-open="terms">Terms of Service</button>
+      <button type="button" class="link" data-open="privacy">Privacy Policy</button>
+    </nav>
+  </div>
+</footer>
+
+<dialog id="terms" aria-labelledby="terms-h"><div class="doc">
+  <h2 id="terms-h">Terms of Service</h2>
+  <p>Last updated 13 November 2026.</p>
+  <h3>1. Purpose</h3><p>Balance Index estimates a mental health score from the details you enter. It is provided for education and general information.</p>
+  <h3>2. No medical advice</h3><p>Results are statistical estimates. They are not a diagnosis, treatment or professional advice. Contact a qualified professional about any health concern. In an emergency, call your local emergency number.</p>
+  <h3>3. Your use</h3><p>You agree to enter your own honest details or clearly fictional ones, and not to send automated or excessive requests, probe the service for weaknesses, or use it to harm others.</p>
+  <h3>4. Ownership</h3><p>The site, its design, code and text are &copy; Lovneesh. All rights reserved. You may use the service for personal, non-commercial purposes.</p>
+  <h3>5. No warranty and liability</h3><p>The service is provided as is and as available, without warranties of accuracy or uptime. To the extent the law allows, the owner is not liable for losses arising from use of the service or reliance on a result.</p>
+  <h3>6. Changes and law</h3><p>These terms may change, and continued use means you accept the update. They are governed by the laws of India, with courts in Jaipur, Rajasthan having jurisdiction.</p>
+  <h3>7. Contact</h3><p>your-email@example.com</p>
+  <button type="button" class="btn" data-close>Close</button>
+</div></dialog>
+
+<dialog id="privacy" aria-labelledby="privacy-h"><div class="doc">
+  <h2 id="privacy-h">Privacy Policy</h2>
+  <p>Last updated 13 November 2026.</p>
+  <h3>What you enter</h3><p>The twelve values in the form are sent over an encrypted connection to the scoring server, used to calculate your score and returned to you. They are not saved to a database or tied to your identity.</p>
+  <h3>What we collect</h3><p>No accounts, no cookies and no analytics. The hosting provider may keep standard technical logs such as IP address, time and request type for security and operations.</p>
+  <h3>Third parties</h3><p>Fonts load from Google Fonts, which receives your IP address and browser details when the page loads. Hosting is provided by Render.</p>
+  <h3>Your rights</h3><p>Ask us any privacy question or request at the address below. Please do not enter names or contact details in the form, as it has no field for them.</p>
+  <h3>Children</h3><p>Users under 18 should use the service with a parent or guardian.</p>
+  <h3>Contact</h3><p>your-email@example.com</p>
+  <button type="button" class="btn" data-close>Close</button>
+</div></dialog>
+
+<script src="script.js" defer></script>
+</body>
+</html>
