@@ -1,7 +1,7 @@
 'use strict';
 
 // '' calls the same server that serves this page. For a separate API, use e.g. 'https://your-api.onrender.com'
-const API_BASE = 'http://127.0.0.1:8000';
+const API_BASE = 'https://mental-health-rewamped.onrender.com';
 const TIMEOUT_MS = 60000;
 
 const $ = (s) => document.querySelector(s);
